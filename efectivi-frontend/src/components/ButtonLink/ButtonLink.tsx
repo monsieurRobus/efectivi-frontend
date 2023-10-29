@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { buttonProps } from '../../interfaces/buttonProps'
 import { Size, buttonColor as buttonColorList } from '../../utils/enums';
+import './ButtonLink.css';
+import { contrastColour } from '../../utils/colours';
 
 const ButtonLink: React.FC<buttonProps> = (props:buttonProps) => {
     const label:string = props.label;
@@ -10,7 +12,7 @@ const ButtonLink: React.FC<buttonProps> = (props:buttonProps) => {
     const buttonColor:buttonColorList = props.buttonColor;
     const buttonSize:Size = props.buttonSize;
     
-    const padding = ()=>{
+    const padding:any = ()=>{
         switch (buttonSize){
             case Size.xs: 
 
@@ -31,29 +33,39 @@ const ButtonLink: React.FC<buttonProps> = (props:buttonProps) => {
     }
 
 
-
+    
 
     const buttonStyle = {
         backgroundColor: props.buttonColor,
+        color: contrastColour(props.buttonColor),
         padding: padding(),
         borderRadius: '1em',
         boxShadow: shadow? '2px 2px 2px #1c1c1c' : 'none',
-        transition: 'all 0.3s'
+        transition: 'all 0.3s ease-in'
     }
 
     const activeStyle = {
         ...buttonStyle,
+        color: buttonColorList.dark,
         backgroundColor: buttonColorList.light,
         transform: 'translate(10px,10px)'
+    }
+    const hoverStyles = {
+        ...buttonStyle,        
+        color: buttonColorList.dark,
+        backgroundColor: buttonColorList.light,
+        boxShadow: `0px 0px 10px ${buttonColorList.light}`
     }
 
     const [buttonStyles,setButtonStyles] = useState(buttonStyle)
 
   return (
-    <a href={to}>
-        <span className={"button-link"}
+    <a  className={"button-link"} href={to}>
+        <span 
             onMouseDown={e => setButtonStyles(activeStyle)}
+            onMouseEnter={e=> setButtonStyles(hoverStyles)}
             onMouseUp={e => setButtonStyles(buttonStyle)}
+            onMouseLeave={e=> setButtonStyles(buttonStyle)}
             style={buttonStyles}>
             {label}
         </span>
