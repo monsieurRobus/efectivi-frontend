@@ -1,6 +1,7 @@
 import CardsSection from '../../components/CardsSection/CardsSection'
 import DescriptionSection from '../../components/DescriptionSection/DescriptionSection'
 import HeroSection from '../../components/HeroSection/HeroSection'
+import ReviewCardsSection from '../../components/ReviewCardsSection/ReviewCardsSection'
 import { Size } from '../../utils/enums'
 
 import './Home.css'
@@ -71,6 +72,49 @@ const Home = () => {
         urlDestination={'https://www.google.com'}
         media={'../../../public/efectiviwonders-section.webp'}
       />
+      <ReviewCardsSection
+        title={'Esto es lo que dicen de nosotros:'}
+        cards={
+          [
+            {
+              title:'Molan mazo',
+              stars:5,
+              description:'Fua, estan buenisimos',
+              url:'https://www.google.es'
+            },
+            {
+              title:'Molan mazo',
+              stars:5,
+              description:'Fua, estan buenisimos',
+              url:'https://www.google.es'
+            },
+            {
+              title:'Molan mazo',
+              stars:5,
+              description:'Fua, estan buenisimos',
+              url:'https://www.google.es'
+            },
+            {
+              title:'Molan mazo',
+              stars:5,
+              description:'Fua, estan buenisimos',
+              url:'https://www.google.es'
+            },
+            {
+              title:'Molan mazo',
+              stars:5,
+              description:'Fua, estan buenisimos',
+              url:'https://www.google.es'
+            },
+            {
+              title:'Molan mazo',
+              stars:5,
+              description:'Fua, estan buenisimos',
+              url:'https://www.google.es'
+            },
+          ]
+        }
+        />
       <HeroSection 
       
         title={'Somos tu festival'}
