@@ -147,3 +147,7 @@
     }
 
 }
+
+.menu-vertical {
+    flex-direction: column;
+}

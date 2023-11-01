@@ -1,5 +1,6 @@
 import CardsSection from '../../components/CardsSection/CardsSection'
 import DescriptionSection from '../../components/DescriptionSection/DescriptionSection'
+import Footer from '../../components/Footer/Footer'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import ReviewCardsSection from '../../components/ReviewCardsSection/ReviewCardsSection'
 import { Size } from '../../utils/enums'
@@ -74,43 +75,36 @@ const Home = () => {
       />
       <ReviewCardsSection
         title={'Esto es lo que dicen de nosotros:'}
+        size={Size.xl}
         cards={
           [
             {
               title:'Molan mazo',
               stars:5,
               description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
+              url:'https://www.google.es',
+              author: 'Perico palote'
             },
             {
               title:'Molan mazo',
               stars:5,
               description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
+              url:'https://www.google.es',
+              author: 'Perico palote'
             },
             {
               title:'Molan mazo',
               stars:5,
               description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
+              url:'https://www.google.es',
+              author: 'Perico palote'
             },
             {
               title:'Molan mazo',
               stars:5,
               description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
-            },
-            {
-              title:'Molan mazo',
-              stars:5,
-              description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
-            },
-            {
-              title:'Molan mazo',
-              stars:5,
-              description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
+              url:'https://www.google.es',
+              author: 'Perico palote'
             },
           ]
         }
@@ -123,7 +117,7 @@ const Home = () => {
         urlDestination={'https://www.google.com'}
         media={'../../../public/efectiviwonders-section.webp'}
       />
-
+      <Footer />
     </main>
   )
 }

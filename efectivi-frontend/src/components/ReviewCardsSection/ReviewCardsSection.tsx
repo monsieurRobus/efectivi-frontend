@@ -6,7 +6,7 @@ import './ReviewCardsSection.css'
 const ReviewCardsSection: React.FC<reviewCardsSectionProps> = (props:reviewCardsSectionProps) => {
   
     const title: string = props.title;
-    const padding : (Size|undefined) = props.padding;
+    
     const cards: reviewCardProps[] = props.cards;
     const marginSize:(Size|undefined) = props.marginSize;
 
@@ -34,9 +34,10 @@ const ReviewCardsSection: React.FC<reviewCardsSectionProps> = (props:reviewCards
     return (
     <section style={sectionStyle} className={"review-cards-section"}>
         <h1>{title}</h1>
-        <div>
-            {cards.map((card,index)=> <ReviewCard title={card.title} stars={card.stars} description={card.description} url={card.url}/>)}
+        <div className={'review-cards-list'}>
+            {cards.map((card,index)=> <ReviewCard key={index} title={card.title} stars={card.stars} description={card.description} url={card.url} author={card.author}/>)}
         </div>
+        <p>¿Quieres ver más? Pásate por nuestro perfil de <a href={'https://www.bodas.net/musica/efectiviwonders--e137295'}>bodas.net</a></p>
     </section>
   )
 }

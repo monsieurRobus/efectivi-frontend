@@ -1,7 +1,14 @@
+import { menuProps } from '../../interfaces/menuProps'
 import { buttonColor, Size } from '../../utils/enums'
 import ButtonLink from '../ButtonLink/ButtonLink'
 import './HeaderNav.css'
-const HeaderNav = () => {
+
+
+const HeaderNav: React.FC<menuProps> = () => {
+
+
+
+
   return (
     <div className={"nav-container"}>
         <input className="checkbox-menu" type="checkbox" name="" id="" />

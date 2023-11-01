@@ -8,8 +8,9 @@ export interface reviewCardsSectionProps {
 }
 
 export interface reviewCardProps {
-    stars:number,
+    stars?:number,
     title:string,
     description:string,
-    url:string,
+    url:string,   
+    author: string
 }

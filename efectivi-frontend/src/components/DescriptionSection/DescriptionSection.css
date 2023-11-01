@@ -27,6 +27,8 @@
         content: ' ';
         display: block;
         position: absolute;
+        
+        z-index: -1;
         left: 0;
         top: 0;
         width: 100%;
@@ -39,6 +41,8 @@
     }
 
     .section-description {
+        
+        z-index: -1;
         display: flex;
         position: relative;
         flex-direction: column;
