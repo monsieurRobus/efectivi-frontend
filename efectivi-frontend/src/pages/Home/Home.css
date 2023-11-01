@@ -1,0 +1,15 @@
+@media screen and (width <= 720px) { 
+
+    main {
+        padding-top: 10vh;
+    }
+
+}
+
+@media screen and (width > 720px) {   
+
+    main {
+        padding-top: 15vh;
+    }
+
+}

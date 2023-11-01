@@ -12,7 +12,7 @@ const ButtonLink: React.FC<buttonProps> = (props:buttonProps) => {
     const buttonColor:buttonColorList = props.buttonColor;
     const buttonSize:Size = props.buttonSize;
     
-    const padding:any = ()=>{
+    const padding = ():string=>{
         switch (buttonSize){
             case Size.xs: 
 
@@ -33,12 +33,31 @@ const ButtonLink: React.FC<buttonProps> = (props:buttonProps) => {
     }
 
 
-    
+    const margin = ():string=>{
+        switch (buttonSize){
+            case Size.xs: 
+                
+                return '0.5rem';
+            case Size.s: 
+
+                return '0.7rem';
+            case Size.m: 
+
+                return '1rem';
+            case Size.l: 
+
+                return '1.2rem';
+            case Size.xl: 
+
+                return '1.5rem';
+        }
+    }
 
     const buttonStyle = {
-        backgroundColor: props.buttonColor,
-        color: contrastColour(props.buttonColor),
+        backgroundColor: buttonColor,
+        color: contrastColour(buttonColor),
         padding: padding(),
+        margin: margin(),
         borderRadius: '1em',
         boxShadow: shadow? '2px 2px 2px #1c1c1c' : 'none',
         transition: 'all 0.3s ease-in'
@@ -59,18 +78,18 @@ const ButtonLink: React.FC<buttonProps> = (props:buttonProps) => {
 
     const [buttonStyles,setButtonStyles] = useState(buttonStyle)
 
-  return (
-    <a  className={"button-link"} href={to}>
-        <span 
-            onMouseDown={e => setButtonStyles(activeStyle)}
-            onMouseEnter={e=> setButtonStyles(hoverStyles)}
-            onMouseUp={e => setButtonStyles(buttonStyle)}
-            onMouseLeave={e=> setButtonStyles(buttonStyle)}
-            style={buttonStyles}>
-            {label}
-        </span>
-    </a>
-  )
+    return (
+        <a  className={"button-link"} href={to}>
+            <span 
+                onMouseDown={() => setButtonStyles(activeStyle)}
+                onMouseEnter={()=> setButtonStyles(hoverStyles)}
+                onMouseUp={() => setButtonStyles(buttonStyle)}
+                onMouseLeave={()=> setButtonStyles(buttonStyle)}
+                style={buttonStyles}>
+                {label}
+            </span>
+        </a>
+    )
 }
 
 export default ButtonLink
