@@ -59,15 +59,16 @@ const ButtonLink: React.FC<buttonProps> = (props:buttonProps) => {
         padding: padding(),
         margin: margin(),
         borderRadius: '1em',
-        boxShadow: shadow? '2px 2px 2px #1c1c1c' : 'none',
-        transition: 'all 0.3s ease-in'
+        boxShadow: shadow? '5px 5px 2px 2px #1c1c1c' : 'none',
+        transition: 'all 0.2s '
     }
 
     const activeStyle = {
         ...buttonStyle,
         color: buttonColorList.dark,
         backgroundColor: buttonColorList.light,
-        transform: 'translate(10px,10px)'
+        boxShadow: shadow? '1px 1px 1px 1px #1c1c1c' : 'none',
+        transform: 'translate(4px,4px)'
     }
     const hoverStyles = {
         ...buttonStyle,        
@@ -79,15 +80,17 @@ const ButtonLink: React.FC<buttonProps> = (props:buttonProps) => {
     const [buttonStyles,setButtonStyles] = useState(buttonStyle)
 
     return (
-        <a  className={"button-link"} href={to}>
-            <span 
-                onMouseDown={() => setButtonStyles(activeStyle)}
-                onMouseEnter={()=> setButtonStyles(hoverStyles)}
-                onMouseUp={() => setButtonStyles(buttonStyle)}
-                onMouseLeave={()=> setButtonStyles(buttonStyle)}
-                style={buttonStyles}>
-                {label}
-            </span>
+        <a  style={buttonStyles} 
+            className={"button-link"} 
+            href={to}>
+                <span 
+                    onMouseDown={() => setButtonStyles(activeStyle)}
+                    onMouseEnter={()=> setButtonStyles(hoverStyles)}
+                    onMouseUp={() => setButtonStyles(buttonStyle)}
+                    onMouseLeave={()=> setButtonStyles(buttonStyle)}
+                    >
+                    {label}
+                </span>
         </a>
     )
 }

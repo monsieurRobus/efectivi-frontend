@@ -1,0 +1,8 @@
+.card-section {
+    display: flex;
+    padding: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:1rem;
+}

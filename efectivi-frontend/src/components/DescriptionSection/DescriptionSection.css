@@ -1,0 +1,109 @@
+@media screen and (width <= 720px) {  
+    
+    .section-extrasmall {
+        height:15vh;
+    }
+    .section-small {
+        height:30vh;
+    }
+    .section-medium {
+        height:50vh;
+    }
+    .section-large {
+        height:70vh;
+    }
+    .section-extralarge {
+        height:85vh;
+    }
+    .section-description {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    
+    }
+    
+    .section-description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('/efectiviwonders-section.webp');
+        background-size: cover;
+    
+    }
+
+    .section-description-content {
+        padding: 1rem;
+    }
+    
+    .section-description img {
+        display: none;
+    }
+    .section-description p {
+        display: flex;
+        width:100%;
+    }
+      }
+@media screen and (width > 720px) {  
+
+.section-extrasmall {
+    height:15vh;
+}
+.section-small {
+    height:30vh;
+}
+.section-medium {
+    height:50vh;
+}
+.section-large {
+    height:70vh;
+}
+.section-extralarge {
+    height:90vh;
+}
+.section-description {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.margin-none{
+    margin:0;
+}
+
+.margin-small{
+    margin:0.5rem;
+}
+
+.margin-medium{
+    margin:1rem;
+}
+
+.margin-large{
+    margin:1.5rem;
+}
+
+.margin-extralarge{
+    margin:2rem;
+}
+
+.inverse-direction{
+    flex-direction: row-reverse;
+}
+
+.section-description-content {
+    width: 66%;
+    padding: 1rem;
+}
+
+.section-description img {
+    width: 33%;    
+    /* border-radius: 10px; */
+    object-fit: cover;
+    object-position: top center;
+}
+
+  }
