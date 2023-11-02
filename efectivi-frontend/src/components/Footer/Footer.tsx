@@ -1,22 +1,31 @@
 import { Size, buttonColor } from '../../utils/enums'
 import ButtonLink from '../ButtonLink/ButtonLink'
-
 import './Footer.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+
 const Footer = () => {
   return (
     <footer>
       <section className={'footer-navigation'}>
-        <div>
+        <div className={"columns logo-column"}>
           <img className={"logo"}
                 src="./efectiviwonders-logo.webp"
                 />
                 <h1>Efectiviwonders</h1>
           </div>
-        <div></div>
-        <div></div>
-        <div className={'footer-nav'}>
-          <nav >
-            <ul className={'menu-vertical'}>
+        <div className={"columns"}></div>
+        <div className={"columns social-icons"}>
+          <div><FontAwesomeIcon icon={faFacebook} /></div>
+          <div><FontAwesomeIcon icon={faInstagram} /></div>
+          <div><FontAwesomeIcon icon={faTwitter} /></div>
+          <div><FontAwesomeIcon icon={faEnvelope} /></div>
+        </div>
+        <div className={'columns'}>
+          <nav className={'footer-nav'}>
+            <ul >
             <li>Quienes somos</li>
             <li>Repertorio</li>
             <li className={'submenu-container'}>Servicios
