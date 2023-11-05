@@ -1,3 +1,4 @@
+aimport { useEffect } from 'react'
 import CardsSection from '../../components/CardsSection/CardsSection'
 import DescriptionSection from '../../components/DescriptionSection/DescriptionSection'
 import HeroSection from '../../components/HeroSection/HeroSection'
@@ -6,6 +7,14 @@ import { Size } from '../../utils/enums'
 
 import './Home.css'
 const Home = () => {
+
+
+  useEffect(()=>{
+
+    console.log(import.meta.env.BASE_URL);
+
+  },[]);
+
   return (
     <main>
       <HeroSection 
