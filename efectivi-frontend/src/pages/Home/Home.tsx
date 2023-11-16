@@ -1,11 +1,11 @@
-aimport { useEffect } from 'react'
-import CardsSection from '../../components/CardsSection/CardsSection'
-import DescriptionSection from '../../components/DescriptionSection/DescriptionSection'
-import HeroSection from '../../components/HeroSection/HeroSection'
-import ReviewCardsSection from '../../components/ReviewCardsSection/ReviewCardsSection'
-import { Size } from '../../utils/enums'
+import { useEffect } from 'react';
+import CardsSection from '../../components/CardsSection/CardsSection';
+import DescriptionSection from '../../components/DescriptionSection/DescriptionSection';
+import HeroSection from '../../components/HeroSection/HeroSection';
+import ReviewCardsSection from '../../components/ReviewCardsSection/ReviewCardsSection';
+import { Size } from '../../utils/enums';
 
-import './Home.css'
+import './Home.css';
 const Home = () => {
 
 
