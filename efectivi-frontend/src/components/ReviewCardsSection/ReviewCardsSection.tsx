@@ -1,4 +1,4 @@
-import { reviewCardProps, reviewCardsSectionProps } from "../../interfaces/reviewCardsProps"
+import { ReviewCardProps, reviewCardsSectionProps } from "../../interfaces/reviewCardsProps"
 import { Size } from "../../utils/enums";
 import ReviewCard from "../ReviewCard/ReviewCard";
 import './ReviewCardsSection.css'
@@ -7,7 +7,7 @@ const ReviewCardsSection: React.FC<reviewCardsSectionProps> = (props:reviewCards
   
     const title: string = props.title;
     const padding : (Size|undefined) = props.padding;
-    const cards: reviewCardProps[] = props.cards;
+    const cards: ReviewCardProps[] = props.cards;
     const marginSize:(Size|undefined) = props.marginSize;
 
     const margin = (size:Size):string => {
@@ -35,7 +35,7 @@ const ReviewCardsSection: React.FC<reviewCardsSectionProps> = (props:reviewCards
     <section style={sectionStyle} className={"review-cards-section"}>
         <h1>{title}</h1>
         <div>
-            {cards.map((card,index)=> <ReviewCard key={index} title={card.title} stars={card.stars} description={card.description} url={card.url}/>)}
+            {cards.map((card,index)=> <ReviewCard key={card.id} id={card.id} attributes={card.attributes}/>)}
         </div>
     </section>
   )

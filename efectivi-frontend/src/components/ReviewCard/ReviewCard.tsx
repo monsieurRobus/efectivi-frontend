@@ -1,18 +1,21 @@
-import { reviewCardProps } from "../../interfaces/reviewCardsProps"
+import { ReviewCardProps } from "../../interfaces/reviewCardsProps"
 
-const ReviewCard: React.FC<reviewCardProps> = (props:reviewCardProps) => {
+const ReviewCard: React.FC<ReviewCardProps> = (props:ReviewCardProps) => {
   
-    const title:string = props.title;
-    const stars:number = props.stars;
-    const description: string = props.description;
-    const url:string = props.url;
+    const id:number = props.id;
+    const attributes:ReviewCardProps["attributes"] = props.attributes;
+
   
     return (
     <section>
         <div>
             
         </div>
-        <h1>{title}</h1>
+        <h1><a href={attributes.url}>{attributes.Title}</a></h1>
+        <div> 
+          <h2>{attributes.ClientName} - {attributes.Fecha?.toString()} </h2>
+        </div>
+        <blockquote>{attributes.Description[0].children[0].text}</blockquote>
 
     </section>
   )

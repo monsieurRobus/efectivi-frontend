@@ -1,15 +1,25 @@
-import { Size } from "../utils/enums"
-
-export interface reviewCardsSectionProps {
-    title:string,
-    padding?:Size,
-    cards:reviewCardProps[],    
-    marginSize?: Size
+export interface ReviewCardProps {
+    id:         number;
+    attributes: Attributes;
 }
 
-export interface reviewCardProps {
-    stars:number,
-    title:string,
-    description:string,
-    url:string,
+export interface Attributes {
+    Title:       string;
+    Description: Description[];
+    ClientName:  string;
+    url:         string;
+    createdAt:   Date;
+    updatedAt:   Date;
+    publishedAt: Date;
+    Fecha:       Date;
+}
+
+export interface Description {
+    type:     string;
+    children: Child[];
+}
+
+export interface Child {
+    type: string;
+    text: string;
 }

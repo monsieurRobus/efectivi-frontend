@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import CardsSection from '../../components/CardsSection/CardsSection';
 import DescriptionSection from '../../components/DescriptionSection/DescriptionSection';
 import HeroSection from '../../components/HeroSection/HeroSection';
@@ -6,12 +6,15 @@ import ReviewCardsSection from '../../components/ReviewCardsSection/ReviewCardsS
 import { Size } from '../../utils/enums';
 
 import './Home.css';
+import { httpGet } from '../../utils/httpCalls';
+
+
 const Home = () => {
-
-
+  const [reviews, setReviews] = useState([]);
+  console.log(reviews)
   useEffect(()=>{
 
-    console.log(import.meta.env.BASE_URL);
+    httpGet('reviews').then(res=> setReviews(res.data));
 
   },[]);
 
@@ -83,46 +86,7 @@ const Home = () => {
       />
       <ReviewCardsSection
         title={'Esto es lo que dicen de nosotros:'}
-        cards={
-          [
-            {
-              title:'Molan mazo',
-              stars:5,
-              description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
-            },
-            {
-              title:'Molan mazo',
-              stars:5,
-              description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
-            },
-            {
-              title:'Molan mazo',
-              stars:5,
-              description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
-            },
-            {
-              title:'Molan mazo',
-              stars:5,
-              description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
-            },
-            {
-              title:'Molan mazo',
-              stars:5,
-              description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
-            },
-            {
-              title:'Molan mazo',
-              stars:5,
-              description:'Fua, estan buenisimos',
-              url:'https://www.google.es'
-            },
-          ]
-        }
+        cards={reviews}
         />
       <HeroSection 
       

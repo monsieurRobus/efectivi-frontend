@@ -6,7 +6,7 @@ const CardsSection: React.FC<cardSectionProps> = (props:cardSectionProps) => {
   return (
     <section className={"card-section"}>
         {cards.map((card,index)=>
-            <CardDescription icon={card.icon} title={card.title} description={card.description}/>
+            <CardDescription key={index} icon={card.icon} title={card.title} description={card.description}/>
         )}
     </section>
   )
