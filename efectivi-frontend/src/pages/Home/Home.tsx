@@ -7,6 +7,7 @@ import { Size } from '../../utils/enums';
 
 import './Home.css';
 import { httpGet } from '../../utils/httpCalls';
+import Footer from '../../components/Footer/Footer';
 
 
 const Home = () => {
@@ -96,7 +97,7 @@ const Home = () => {
         urlDestination={'https://www.google.com'}
         media={'../../../public/efectiviwonders-section.webp'}
       />
-
+    <Footer />
     </main>
   )
 }

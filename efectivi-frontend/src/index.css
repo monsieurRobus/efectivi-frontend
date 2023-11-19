@@ -20,7 +20,15 @@ body {
   min-height: 100vh;
 }
 
+html {
+  box-sizing: border-box;
+}
 
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 
 button {
   border-radius: 8px;

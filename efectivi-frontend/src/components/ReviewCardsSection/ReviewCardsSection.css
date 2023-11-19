@@ -1,7 +1,19 @@
 .review-cards-section {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap:1rem;
     align-items: center;
     flex-direction: column;
+
+}
+.review-cards-section-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:inherit;
+    gap:1rem;
+    align-items: flex-start;
+    flex-direction: row;
 
 }

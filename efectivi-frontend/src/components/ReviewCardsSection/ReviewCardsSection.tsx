@@ -34,8 +34,8 @@ const ReviewCardsSection: React.FC<reviewCardsSectionProps> = (props:reviewCards
     return (
     <section style={sectionStyle} className={"review-cards-section"}>
         <h1>{title}</h1>
-        <div>
-            {cards.map((card,index)=> <ReviewCard key={card.id} id={card.id} attributes={card.attributes}/>)}
+        <div className={'review-cards-section-content'}>
+            {cards.map((card,index)=> <ReviewCard key={index} id={card.id} attributes={card.attributes}/>)}
         </div>
     </section>
   )

@@ -1,13 +1,14 @@
 import { ReviewCardProps } from "../../interfaces/reviewCardsProps"
-
-const ReviewCard: React.FC<ReviewCardProps> = (props:ReviewCardProps) => {
+import './ReviewCard.css'
+const ReviewCard: React.
+FC<ReviewCardProps> = (props:ReviewCardProps) => {
   
     const id:number = props.id;
     const attributes:ReviewCardProps["attributes"] = props.attributes;
 
   
     return (
-    <section>
+    <section className={'review-card'}>
         <div>
             
         </div>
